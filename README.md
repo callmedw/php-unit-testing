@@ -30,7 +30,9 @@
   <a href="#license">License</a>
 </p>
 <br>
+
 <!-- ## Preview -->
+
 ## Features
 
 To pass this code review with a Meets Expectations the following criteria are required:
