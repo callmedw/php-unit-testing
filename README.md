@@ -37,7 +37,7 @@
 
 To pass this code review with a Meets Expectations the following criteria are required:
 
-- [ ] Composer.json file includes PHPUnit for dev
+- [x] Composer.json file includes PHPUnit for dev
 - [ ] Verifies proper results for all test cases
 - [ ] New image feature added
 - [ ] All green!
