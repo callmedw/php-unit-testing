@@ -44,7 +44,6 @@ To pass this code review with a Meets Expectations the following criteria are re
 
 ## Required Technologies
 
-* [Git](https://git-scm.com)
 * [CSS](https://www.w3.org/TR/CSS/)
 * [HTML](https://www.w3.org/TR/html5/)
 * [PHP](https://php.net)
@@ -52,13 +51,14 @@ To pass this code review with a Meets Expectations the following criteria are re
 
 ## Suggested Technologies
 
+* [Git](https://git-scm.com)
 * [Atom](https://atom.io/)
 * [Composer](https://getcomposer.org/)
 * [MAMP](https://www.mamp.info/en/) or [Apache](https://httpd.apache.org/)
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. To edit this project you may want a text-editor like [Atom](https://atom.io/). To install [PHPUnit](https://phpunit.de/index.html) you will want a dependency manager like [Composer](https://getcomposer.org/). To view this application in a browser you'll need a web server like [Apache](https://httpd.apache.org/) or the Apache and MySQL bundled stack, [MAMP](https://www.mamp.info/en/). From your command line:
+To clone and run this application, you will probably want [Git](https://git-scm.com) installed on your computer. To edit this project you may want a text-editor like [Atom](https://atom.io/). To install [PHPUnit](https://phpunit.de/index.html) you will want a dependency manager like [Composer](https://getcomposer.org/). To view this application in a browser you'll need a web server like [Apache](https://httpd.apache.org/) or the Apache and MySQL bundled stack, [MAMP](https://www.mamp.info/en/). From your command line:
 
 ```bash
 # Clone this repository
