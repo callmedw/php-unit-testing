@@ -2,6 +2,7 @@
 
   bootstrap="vendor/autoload.php"
   colors="true"
+  printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
   >
 
   <logging>
