@@ -1,12 +1,21 @@
-<filter>
-    <whitelist processUncoveredFilesFromWhitelist="true">
-        <directory suffix=".php">classes</directory>
-    </whitelist>
-</filter>
-<logging>
+<phpunit
+
+  bootstrap="vendor/autoload.php"
+  colors="true"
+  >
+
+  <logging>
+    <log type="testdox-html" target="tests/log/testdox.html"/>
+    <log type="testdox-text" target="tests/log/testdox.txt"/>
     <log type="coverage-html" target="tests/log/report" lowUpperBound="35"
     highLowerBound="70"/>
     <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
-    <log type="testdox-html" target="tests/log/testdox.html"/>
-    <log type="testdox-text" target="tests/log/testdox.txt"/>
-</logging>
+  </logging>
+
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+        <directory suffix=".php">classes</directory>
+    </whitelist>
+  </filter>
+
+</phpunit>
