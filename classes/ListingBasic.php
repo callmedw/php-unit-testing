@@ -30,10 +30,9 @@ class ListingBasic
             throw new Exception('Unable to create a listing, invalid title');
         }
         $this->setTitle($data['title']);
-        if (!isset($data['image'])) {
-            throw new Exception('Unable to create a listing, you must include an image');
+        if (isset($data['image'])) {
+          $this->setImage($data['image']);
         }
-        $this->setImage($data['image']);
         if (isset($data['website'])) {
             $this->setWebsite($data['website']);
         }
@@ -51,6 +50,11 @@ class ListingBasic
     public function setImage($value)
     {
         $this->image = trim(filter_var($value, FILTER_SANITIZE_STRING));
+    }
+
+    public function getImage()
+    {
+      return $this->image;
     }
 
     /**

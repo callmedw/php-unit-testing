@@ -11,7 +11,7 @@ class ListingImageTest extends TestCase
         $data = [
             'id' => 1,
             'title' => 'Test Title',
-            'image' => '',
+            'image' => ' ',
         ];
         $listing = new ListingBasic($data);
         $this->assertFalse($listing->getImage());
