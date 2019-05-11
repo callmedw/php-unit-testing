@@ -2,7 +2,7 @@
 
 class ListingBasic
 {
-    private $id, $title, $website, $email, $twitter;
+    private $id, $title, $website, $email, $twitter, $image;
     protected $status = 'basic';
 
     /**
@@ -30,6 +30,10 @@ class ListingBasic
             throw new Exception('Unable to create a listing, invalid title');
         }
         $this->setTitle($data['title']);
+        if (!isset($data['image'])) {
+            throw new Exception('Unable to create a listing, you must include an image');
+        }
+        $this->setImage($data['image']);
         if (isset($data['website'])) {
             $this->setWebsite($data['website']);
         }
@@ -42,9 +46,11 @@ class ListingBasic
         if (isset($data['status'])) {
             $this->setStatus($data['status']);
         }
-        if (isset($data['image'])) {
-            $this->setImage($data['image']);
-        }
+    }
+
+    public function setImage($value)
+    {
+        $this->image = trim(filter_var($value, FILTER_SANITIZE_STRING));
     }
 
     /**
