@@ -76,7 +76,7 @@ class ListingBasicTest extends TestCase {
 
   public function testToArrayReturnsListingObjArray() {
     $this->assertIsNotArray($this->listing);
-    
+
     $listingArray = $this->listing->toArray();
     $this->assertIsArray($listingArray);
 
