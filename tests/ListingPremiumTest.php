@@ -21,5 +21,8 @@ class ListingPremiumTest extends TestCase {
     $this->assertEquals("premium", $this->listing->getStatus());
   }
 
+  public function testGetDescriptionReturnsExpected() {
+    $this->assertEquals("description", $this->listing->getDescription());
+  }
 
 }
