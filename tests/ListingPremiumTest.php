@@ -12,7 +12,8 @@ class ListingPremiumTest extends TestCase {
       "website" => "http://www.website.com",
       "email" => "user@test.com",
       "twitter" => "testuser",
-      "description" => "description"
+      "description" => "description",
+      'image' => 'https://www.cascadiaphp.com/images/logo.svg',
     ];
     $this->listing = new ListingPremium($data);
   }

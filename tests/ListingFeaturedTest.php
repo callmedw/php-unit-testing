@@ -13,6 +13,7 @@ class ListingFeaturedTest extends TestCase {
       "email" => "user@test.com",
       "twitter" => "testuser",
       "coc" => "no idea what this is...",
+      'image' => 'https://www.cascadiaphp.com/images/logo.svg',
     ];
     $this->listing = new ListingFeatured($data);
   }
