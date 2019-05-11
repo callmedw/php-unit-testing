@@ -9,9 +9,9 @@ class ListingBasicTest extends TestCase {
     $data = [
       "id" => 1,
       "title" => "Title",
-      "website" => "www.website.com",
+      "website" => "http://www.website.com",
       "email" => "user@test.com",
-      "twitter" => "@testuser",
+      "twitter" => "testuser",
     ];
     $this->listing = new ListingBasic($data);
   }
@@ -62,8 +62,16 @@ class ListingBasicTest extends TestCase {
 
   //----- METHOD RETURNS -----\\
 
-  function testGetStatusReturnsBasic() {
+  public function testGetStatusReturnsBasic() {
     $this->assertEquals("basic", $this->listing->getStatus());
+  }
+
+  public function testGetMethodsReturnExpected() {
+    $this->assertEquals($this->listing->getId(), 1);
+    $this->assertEquals($this->listing->getTitle(), "Title");
+    $this->assertEquals($this->listing->getWebsite(), "http://www.website.com");
+    $this->assertEquals($this->listing->getEmail(), "user@test.com");
+    $this->assertEquals($this->listing->getTwitter(), "testuser");
   }
 
 }
