@@ -54,6 +54,7 @@ class ListingBasic
 
     public function getImage()
     {
+      if (empty($this->image)) return false;
       return $this->image;
     }
 
