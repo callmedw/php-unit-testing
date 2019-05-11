@@ -1,4 +1,5 @@
 <?php
+include __DIR__ .'/../inc/config.php';
 
 class ListingBasic
 {
@@ -54,8 +55,11 @@ class ListingBasic
 
     public function getImage()
     {
-      if (empty($this->image)) return false;
-      return $this->image;
+        if (empty($this->image)) return false;
+        if (substr($this->image, 0, 4) != 'http') {
+            $this->image = BASE_URL . '/' . $this->image;
+        }
+        return $this->image;
     }
 
     /**

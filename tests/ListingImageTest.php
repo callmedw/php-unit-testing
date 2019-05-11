@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ .'/../classes/ListingBasic.php';
-
+include __DIR__ .'/../inc/config.php';
 use PHPUnit\Framework\TestCase;
 
 class ListingImageTest extends TestCase
