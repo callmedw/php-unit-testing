@@ -101,6 +101,12 @@ class ComposerStaticInit1343a311b6f951d2a56028294e6fcff0
     );
 
     public static $classMap = array (
+        'Collection' => __DIR__ . '/../..' . '/classes/Collection.php',
+        'Connection' => __DIR__ . '/../..' . '/classes/Connection.php',
+        'ListingBasic' => __DIR__ . '/../..' . '/classes/ListingBasic.php',
+        'ListingFeatured' => __DIR__ . '/../..' . '/classes/ListingFeatured.php',
+        'ListingInactive' => __DIR__ . '/../..' . '/classes/ListingInactive.php',
+        'ListingPremium' => __DIR__ . '/../..' . '/classes/ListingPremium.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',

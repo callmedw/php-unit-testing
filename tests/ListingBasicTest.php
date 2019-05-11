@@ -13,6 +13,7 @@ class ListingBasicTest extends TestCase {
       "email" => "user@test.com",
       "twitter" => "testuser",
     ];
+    
     $this->listing = new ListingBasic($data);
   }
 

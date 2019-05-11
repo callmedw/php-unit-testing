@@ -17,4 +17,9 @@ class ListingPremiumTest extends TestCase {
     $this->listing = new ListingPremium($data);
   }
 
+  public function testGetStatusReturnsPremium() {
+    $this->assertEquals("premium", $this->listing->getStatus());
+  }
+
+
 }
