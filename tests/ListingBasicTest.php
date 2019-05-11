@@ -4,17 +4,17 @@ use PHPUnit\Framework\TestCase;
 class ListingBasicTest extends TestCase {
 
   protected $listing;
+  protected $data = [
+    "id" => 1,
+    "title" => "Title",
+    "website" => "http://www.website.com",
+    "email" => "user@test.com",
+    "twitter" => "testuser",
+    'image' => 'https://www.cascadiaphp.com/images/logo.svg',
+  ];
 
   protected function setUp(): void {
-    $data = [
-      "id" => 1,
-      "title" => "Title",
-      "website" => "http://www.website.com",
-      "email" => "user@test.com",
-      "twitter" => "testuser",
-    ];
-    
-    $this->listing = new ListingBasic($data);
+    $this->listing = new ListingBasic($this->data);
   }
 
   //----- EXCEPTIONS -----\\
@@ -34,6 +34,7 @@ class ListingBasicTest extends TestCase {
     $data = [
       "id" => null,
       "title" => "Title",
+      'image' => 'https://www.cascadiaphp.com/images/logo.svg',
     ];
     $listing = new ListingBasic($data);
   }
@@ -45,6 +46,7 @@ class ListingBasicTest extends TestCase {
     $data = [
       "id" => 1,
       "title" => null,
+      'image' => 'https://www.cascadiaphp.com/images/logo.svg',
     ];
     $listing = new ListingBasic($data);
   }
@@ -52,11 +54,7 @@ class ListingBasicTest extends TestCase {
   //----- CREATION -----\\
 
   public function testCreateListingObject() {
-    $data = [
-      "id" => 1,
-      "title" => "Title",
-    ];
-    $listing = new ListingBasic($data);
+    $listing = new ListingBasic($this->data);
 
     $this->assertInstanceOf(ListingBasic::class, $listing);
   }
