@@ -42,6 +42,28 @@ To pass this code review with a Meets Expectations the following criteria are re
 - [x] New image feature added
 - [x] All green!
 
+ListingBasic
+- [x] Exception thrown if null data
+- [x] Exception thrown if null id
+- [x] Exception thrown if null title
+- [x] Create listing object
+- [x] Get status returns basic
+- [x] Get methods return expected
+- [x] To array returns listing obj array
+
+ListingFeatured
+- [x] Get status returns featured
+- [x] Get coc returns expected
+
+ListingImage
+- [x] No image
+- [x] Full path image
+- [x] Build path image
+
+ListingPremium
+- [x] Get status returns premium
+- [x] Get description returns expected
+
 ## Required Technologies
 
 * [CSS](https://www.w3.org/TR/CSS/)
