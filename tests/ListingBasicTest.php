@@ -60,4 +60,10 @@ class ListingBasicTest extends TestCase {
     $this->assertInstanceOf(ListingBasic::class, $listing);
   }
 
+  //----- METHOD RETURNS -----\\
+
+  function testGetStatusReturnsBasic() {
+    $this->assertEquals("basic", $this->listing->getStatus());
+  }
+
 }
