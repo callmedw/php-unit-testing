@@ -3,6 +3,19 @@ use PHPUnit\Framework\TestCase;
 
 class ListingBasicTest extends TestCase {
 
+  protected $listing;
+
+  protected function setUp(): void {
+    $data = [
+      "id" => 1,
+      "title" => "Title",
+      "website" => "www.website.com",
+      "email" => "user@test.com",
+      "twitter" => "@testuser",
+    ];
+    $this->listing = new ListingBasic($data);
+  }
+
   //----- EXCEPTIONS -----\\
 
   public function testExceptionThrownIfNullData() {
