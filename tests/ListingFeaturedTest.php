@@ -12,13 +12,17 @@ class ListingFeaturedTest extends TestCase {
       "website" => "http://www.website.com",
       "email" => "user@test.com",
       "twitter" => "testuser",
-      "description" => "description"
+      "coc" => "no idea what this is...",
     ];
     $this->listing = new ListingFeatured($data);
   }
 
   public function testGetStatusReturnsFeatured() {
     $this->assertEquals("featured", $this->listing->getStatus());
+  }
+
+  public function testGetCocReturnsExpected() {
+    $this->assertEquals("no idea what this is...", $this->listing->getCoc());
   }
 
 }
