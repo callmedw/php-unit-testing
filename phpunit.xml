@@ -19,7 +19,7 @@
     </whitelist>
   </filter>
 
-  <testsuite>
+  <testsuite name="listings">
       <directory>tests</directory>
   </testsuite>
 
