@@ -17,7 +17,18 @@ class ListingBasicTest extends TestCase {
 
     $data = [
       "id" => null,
-      "title" => "Title"
+      "title" => "Title",
+    ];
+    $listing = new ListingBasic($data);
+  }
+
+  public function testExceptionThrownIfNullTitle() {
+    $this->expectException(Exception::class);
+    $this->expectExceptionMessage("Unable to create a listing, invalid title");
+
+    $data = [
+      "id" => 1,
+      "title" => null,
     ];
     $listing = new ListingBasic($data);
   }
