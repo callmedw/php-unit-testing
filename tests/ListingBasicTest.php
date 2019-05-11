@@ -74,4 +74,17 @@ class ListingBasicTest extends TestCase {
     $this->assertEquals($this->listing->getTwitter(), "testuser");
   }
 
+  public function testToArrayReturnsListingObjArray() {
+    $this->assertIsNotArray($this->listing);
+    
+    $listingArray = $this->listing->toArray();
+    $this->assertIsArray($listingArray);
+
+    $this->assertEquals($this->listing->getId(), $listingArray['id']);
+    $this->assertEquals($this->listing->getTitle(), $listingArray['title']);
+    $this->assertEquals($this->listing->getWebsite(), $listingArray['website']);
+    $this->assertEquals($this->listing->getEmail(), $listingArray['email']);
+    $this->assertEquals($this->listing->getTwitter(), $listingArray['twitter']);
+  }
+
 }
